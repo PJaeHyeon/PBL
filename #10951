@@ -1,0 +1,18 @@
+#include <stdio.h> 
+int main(void)
+{
+	int a = -1;
+	int b = -1;
+	int n = 0;
+
+	while (n < 5)//반복횟수 설정
+	{
+		printf("a와 b를 입력하시오.: \n");
+		scanf("%d", &a);
+		scanf("%d", &b);
+
+		int c = a + b;
+		printf("c= %d\n", c);
+		n++;//n이 1씩 증가
+	}
+}
