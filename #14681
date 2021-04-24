@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main(void) {
+	int x = 0;
+	int y = 0;
+	printf("x좌표를 입력하시오.(x!=0): ");
+	scanf_s("%d", &x);
+	printf("y좌표를 입력하시오.(y!=0): ");
+	scanf_s("%d", &y);
+	if (x > 0) {
+		if (y > 0) {
+			printf("제1사분면");
+		}// x>0, y>0 일때, 제1사분면이다.
+		else {
+			printf("제4사분면");
+		}// x>0, y<0 일때, 제4사분면이다.
+	}
+	else {
+		if (y > 0) {
+			printf("제2사분면");
+		}// x<0, y>0 일때, 제2사분면이다.
+		else {
+			printf("제3사분면");
+		}// x<0, y<0 일때, 제3사분면이다.
+	}
+}
