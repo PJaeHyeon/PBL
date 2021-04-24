@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main(void){
+	printf("시험점수를 입력하시오.(0~100): ");
+	int s = 0;
+	scanf_s("%d", &s);
+	if (100 >= s >= 90) {
+		printf("A");
+	}//점수가 100~90일때 A
+	else if (89 >= s >= 80) {
+		printf("B");
+	}//점수가 89~80 일때 B
+	else if (79 >= s >= 70) {
+		printf("C");
+	}//점수가 79~70 일때 C
+	else{
+		printf("D");
+	}//점수가 69~0일때 D
+}
