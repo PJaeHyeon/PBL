@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() { //문제 번호 10871번
+	int n; //필요한 변수 설정
+	int x;
+	int A[100];
+
+	printf("수열 개수 N을 입력하세요."); 
+	scanf("%d", &n);
+
+	printf("X를 입력하세요.");
+	scanf("%d", &x);
+
+
+
+	for (int i = 0; i < n; i++) { //수열에 a값 입력하는 for문 작성
+		printf("수열 %d 번째 값 입력: ", i);
+		scanf("%d", &A[i]); //수열 a에 값 입력	
+	}
+
+	for (int i = 0; i < n; i++) { 
+		if (A[i] < x) { //수열 값이 x보다 작으면 출력
+			printf("%d ", A[i]);
+		}
+	}
+
+
+}
