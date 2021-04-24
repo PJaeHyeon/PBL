@@ -1,0 +1,24 @@
+#include <stdio.h> 
+int main(void)
+{
+	int h = 0;
+	int m = 0;
+	printf("시간을 입력하시오.(24h): ");
+	scanf("%d", &h);
+	scanf("%d", &m);
+	if (m - 45 >= 0) {
+		m = m - 45;
+		printf("%d시 %d분", h, m);
+	}//45분 이상 일때, 시간은 바뀌지 않는다. 
+	else {
+		h = h - 1;
+		if (h >= 0) {
+			m = m + 15;
+			printf("%d시 %d분", h, m);
+		}//45분미만 일때, 시간이 바뀐다. 
+		else {
+			m = m + 15;
+			h = h + 24; printf("%d시 %d분", h, m);
+		}//시간이 0 보다 작아지면 전날로 시간이 넘어가기 때문에 시간에 24시간을 더해 준다. 
+	}
+}
