@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() { //문제 번호 8393번
+	int n; //필요한 변수 설정
+	int sum = 0;
+	
+
+	printf("1부터 n까지의 합을 구할 n을 입력하세요."); 
+	scanf("%d", &n);
+
+	for (int i = 1; i <= n; i++) { //1부터 n까지 더할 for문 작성
+		sum = sum + i;
+	}
+
+	printf("1부터 %d까지의 합은 : %d", n, sum);
+}
