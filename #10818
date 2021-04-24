@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() { //문제 번호 10818번
+	int n; //필요한 변수 설정
+	int max = 0;
+	int min ;
+	int A[100];
+
+	printf("N을 입력하세요."); 
+	scanf("%d", &n);
+
+	for (int i = 0; i < n; i++) { //수열에 a값 입력하는 for문 작성
+		printf("수열 %d 번째 값 입력: ", i);
+		scanf("%d", &A[i]); //수열 a에 값 입력	
+	}
+
+	for (int i = 0; i < n; i++) { 
+		if (max < A[i]) { //최댓값을 구하는 식 입력
+			max = A[i];
+		}
+	}
+
+	for (int i = 1; i < n; i++) {
+		if (A[i] < A[i - 1]) { //최소 값을 구하는 식 입력
+			min = A[i];
+		}
+	}
+	printf("%d %d", max, min);
+
+}
