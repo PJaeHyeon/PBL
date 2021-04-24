@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() { //문제 번호 1110번
+	int n; //필요한 변수 설정
+	int a;
+	int b;
+	int c = 0;
+	int cycle = 0; //사이클 변수 설정
+	int newn;
+
+	printf("숫자 n입력."); 
+	scanf("%d", &n);
+	newn = n; //임의의 변수에 n저장
+
+	while (true) { //무한반복
+		if (c == newn) { //새로운 숫자가 처음숫자와 같을때 반복문 탈출
+			break;
+		}
+		else {  //새로운 숫자 구하는 식 입력
+			a = n / 10; //10의 자리 숫자
+			b = n % 10; //1의 자리 숫자
+			c = b * 10 + ((a + b)%10); //새로운 숫자 구하는 식
+			n = c; //반복하기위한 n설정
+			cycle++; //사이클 1회 증가
+		}
+	}
+	printf("사이클 횟수 %d", cycle);
+
+}
