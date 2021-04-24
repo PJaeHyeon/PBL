@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+
+int main() //문제번호 2588
+{
+    int a; //첫번째 세자리 숫자 변수 설정
+    int b; //두번째 세자리 숫자 변수 설정
+    int three; // (3)에 들어갈 값
+    int four; //(4)에 들어갈 값
+    int five; //(5)에 들어갈 값
+    int multi; //(6)에 들어갈 값
+
+    printf("첫번째 세자리 숫자를 입력하세요.");
+    scanf("%d", &a); //입력받는 명령어 생성
+
+    printf("두번째 세자리 숫자를 입력하세요.");
+    scanf("%d", &b);//입력받는 명령어 생성
+
+    three = a * (b % 10); //필요한 수식입력
+
+    four = a * ((b % 100) / 10); //필요한 수식입력
+
+    five = a * (b / 100); //필요한 수식입력
+
+    multi  = three + 10*four + 100*five; //최종으로 두수의 곱셈값
+
+    printf("%d \n", three); //(3)값  출력
+    printf("%d \n", four); //(4)값 출력
+    printf("%d \n", five); //(5)값 출력
+    printf("%d \n", multi); //(6)값 출력
+
+}
