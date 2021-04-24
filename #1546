@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() { //문제 번호 1546번
+	int n; //필요한 변수 설정
+	float max = 0;
+	float sum = 0;
+	float aver ;
+	float A[100];
+
+	printf("과목 개수 N을 입력하세요."); 
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) { //수열에 a값 입력하는 for문 작성
+		printf("%d 번째 과목 점수 입력: ", i);
+		scanf("%d", &A[i]); //수열 a에 값 입력	
+	}
+	for (int i = 0; i < n; i++) { 
+		if (max < A[i]) { //과목중 최대 점수를 구하는 식 입력
+			max = A[i];
+		}
+	}
+	for (int i = 0; i < n; i++) { //조작한 각 과목의 점수 구하는 식 입력
+		A[i] = (A[i] / max )* 100;
+	}
+	for (int i = 0; i < n; i++) { //모든 과목 평균구하는 식 입력
+		sum = A[i] + sum;
+	}
+	aver = sum / n;
+	printf("평균은 %f", aver);
+
+}
