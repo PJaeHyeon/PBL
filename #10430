@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() { //문제 번호 10430
+	int a; //필요한 변수 설정
+	int b; 
+	int c;
+
+	printf("첫번째 숫자를 입력하세요.");
+	scanf("%d",&a);
+
+	printf("두번째 숫자를 입력하세요.");
+	scanf("%d",&b);
+
+	printf("세번째 숫자를 입력하세요.");
+	scanf("%d".,&c);
+
+	printf("%d \n", (a + b) % c); //문제에서 제시된 수식들을 입력
+	printf("%d \n", ((a % c) + (b % c)) % c);
+	printf("%d \n", (a * b) % c);
+	printf("%d \n", ((a % c) * (b % c)) % c);
+
+	//1=2 3=4 를 알수있다.
+}
