@@ -1,0 +1,6 @@
+#include <stdio.h>
+
+int main() //문제번호 2557
+{
+    printf("Hello World"); //Hello world를 출력합니다.
+}
