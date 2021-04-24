@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int a=0;
+	int b=0;
+
+	printf("a를 입력하시오.: \n");
+	scanf_s("%d", &a);//a를 입력
+
+	printf("b를 입력하시오.: \n");
+	scanf_s ("%d", &b);//b를 입력
+
+	if (a > b) {
+		printf("%d > %d\n", a, b);
+	}// a가 b보다 클 때
+
+	else if (a == b) {
+		printf("%d = %d\n", a, b);
+	}//a와 b가 같을 때
+
+	else if (a < b) {
+		printf("%d > %d\n", a, b);
+	}//a가 b보다 작을때
+}
