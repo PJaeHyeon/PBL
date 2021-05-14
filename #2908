@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main() {
+	int n1;  //필요한 변수 설정
+	int n2;
+	int r1=0; //변환된 뒤집어진 값
+	int r2=0;
+
+	printf("첫번째 숫자를 입력하세요 :");
+	scanf("%d", &n1);
+
+	int b = n1 / 100;   //숫자 뒤집는 공식 대입
+	int c = ((n1%100)/10) * 10;
+	int d = (n1 % 10)*100;
+	r1 = b + c + d;
+	
+	printf("두번째 숫자를 입력하세요 :");
+	scanf("%d", &n2);
+
+	b = n2 / 100;  //숫자 뒤집는 공식 대입
+	c = ((n2%100)/10) * 10;
+	d = (n2 % 10)*100;
+	r2 = b + c + d;
+
+	printf("뒤집어진 첫번째 숫자 %d \n", r1);
+	printf("뒤집어진 두번째 숫자 %d \n", r2);
+
+	if (r1 > r2) // 결과값 비교해 출력
+		printf("큰 숫자 %d \n", r1);
+	else
+		printf("큰 숫자 %d \n", r2);
+	return 0;
+}
