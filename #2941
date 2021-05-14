@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main() {
+	char word[100] = { NULL }; //단어 배열 생성
+	int count = 0; //count 변수 생성
+
+	gets_s(word);
+
+	for (int i = 0; i < strlen(word); i++) { //길이 만큼 반복
+		if (word[i] == 'c') { //앞글자가 c일때
+            if (word[i + 1] == '=' || word[i + 1] == '-') //두가지 경우로 나눈후 
+                continue; //continue를 통해 if문 탈출
+		}
+        else if (word[i] == 'd') { //앞글자가 d일때
+            if (word[i + 1] == '-') //d-이면
+                continue; //continue를 통해 if문 탈출
+            else if (word[i + 1] == 'z' && word[i + 2] == '=') //두가지 경우로 나눈후
+                continue; //continue를 통해 if문 탈출
+        }
+        else if (word[i] == 'n' || word[i] == 'l') { //앞을자가 n이나 l일때
+            if (word[i + 1] == 'j') //뒤글자가 j면
+                continue; //continue를 통해 if문 탈출
+        }
+        else if (word[i] == 's' || word[i] == 'z') { //앞글자가 s나 z일때
+            if (word[i + 1] == '=') //뒷글자가 =이면
+                continue; //continue를 통해 if문 탈출
+        }
+        count++; //검사 한번 한후 개수 늘려줌
+     
+	}
+	printf("크로아티아 단어 개수 = %d", count);
+	return 0;
+}
