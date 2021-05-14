@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main() {
+	char alpa[100000] = { NULL }; //필요한 배열 추가
+	int count = 0;
+
+	printf("알파벳대문자를 입력하세요 : ");
+	gets_s(alpa);
+
+	for (int i = 0; i < strlen(alpa); i++) { //문제에 주어진 조건에 따라 if문작정
+		if (alpa[i] == 'A' || alpa[i] == 'B' || alpa[i] == 'C') {
+			count += 3;  //ABC일때 시간 3추가
+		}
+		else if (alpa[i] == 'D' || alpa[i] == 'E' || alpa[i] == 'F') {
+			count += 4; //DE일때 시간 4추가
+		}
+		else if (alpa[i] == 'G' || alpa[i] == 'H' || alpa[i] == 'I') {
+			count += 5; //GHI일때 시간 5추가
+		}
+		else if (alpa[i] == 'J' || alpa[i] == 'K' || alpa[i] == 'L') {
+			count += 6; //JKL일때 시간 6추가
+		}
+		else if (alpa[i] == 'M' || alpa[i] == 'N' || alpa[i] == 'O') {
+			count += 7; //MNO일때 시간 7추가
+		}
+		else if (alpa[i] == 'R' || alpa[i] == 'Q' || alpa[i] == 'P' || alpa[i] == 'S') {
+			count += 8; //RQPS일때 시간 8추가
+		}
+		else if (alpa[i] == 'T' || alpa[i] == 'U' || alpa[i] == 'V') {
+			count += 9; //TUV일때 시간 9추가
+		}
+		else
+		{
+			count += 10; //나머지상황 일때 시간 10추가
+		}
+	}
+	
+	printf("시간 = %d", count);
+}
