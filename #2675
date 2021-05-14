@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int t, r;
+	char p[20];
+
+	printf("테스터 갯수: \n");
+	scanf("%d", &t);
+
+	for (int i = 0; i < t; i++)
+	{
+		printf("문자열 반복 횟수: \n");
+		scanf("%d", &r);
+		printf("문자열: \n");
+		scanf("%s", p);
+
+		for (int i = 0; i < strlen(p); i++)
+		{
+			for (int j = 0; j < r; j++)
+			{
+				printf("%c", p[i]);
+			}
+		}
+		printf("\n");
+
+	}
+}
