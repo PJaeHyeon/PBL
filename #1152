@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main() {
+	char words[1000000] = { NULL };//문제의 조건에서 크기 1000000
+
+	int count = 0; //필요한 변수 설정
+
+	gets_s(words); //문자열 입력받는 함수  gets_s 설정
+
+	for (int i = 0; i < strlen(words); i++) {
+		if (words[i] != ' ') { //맨처음 글자가 공백이면
+			if (i > 0 && words[i - 1] != ' ') //i가 0보다 크고, 앞의글자가 공백이 아니면 계속 
+				continue;
+			else
+				count++; //아니면 단어 개수 증가
+		}
+	}
+
+	printf("단어의 개수 %d \n", count);
+
+	return 0;
+
+}
