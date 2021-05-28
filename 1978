@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int n,num,a; //a는 소수 판별 기준변수
+	int count = 0;
+
+	printf("수의 개수를 입력하세요:");
+	scanf("%d", &n);
+
+	for(int i=0;i<n;i++){ //숫자를 입력할때 마다 소수 검사
+		scanf("%d", &num);
+		a = 0; //처음에 a를 0으로 지정 0이면 소수
+		
+		if (num == 1) // 숫자가 1이면 소수가 아니기 때문에 탈출
+			continue;
+		for (int j = 2; j < num; j++) {
+			if (num % j == 0)
+				a = 1; //a가 1이면 소수가 아님
+		}
+
+		if (a == 0) { //a가 0이면 1과 자기자신만 나누어지기 때문에 소수
+				count++; //개수 늘려줌
+		}
+		
+	}
+	printf("소수의 개수는 : %d \n", count);
+
+}
