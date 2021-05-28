@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void) {
+	int t, h, w, n, i;
+	printf("Test개수를 입력하세요:\n");
+	scanf("%d", &t);
+
+	for (i = 0; i < t; i++) {
+		printf("층 방개수 번호 를 입력하세요:\n");
+		scanf("%d %d %d", &h, &w, &n);
+		if (n % h == 0) { //층과 번호를 나누었을때 0이면
+			printf("%d", h);  //층그대로
+			printf("0");
+			printf("%d\n", n / h); //번호와 층을 나눈 몫
+		}
+		else //0이 아니면
+			printf("%d", n%h); //번호를 층으로 나누었을때의 나머지
+			printf("0");
+			printf("%d\n", n / h + 1); //번호와 층을 나눈 몫에 +1
+	}
+}
