@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int kg;
+	int count = 0;
+	printf("몇 kg인지 입력하세요:");
+	scanf("%d", &kg);
+
+	while (kg > 0) { //kg이 0보다 클때까지
+		if (kg % 5 == 0) {
+			kg -= 5; //kg을 5kg씩 빼고
+			count++; //봉지의 개수를 1개 늘린다.
+		}
+		else if (kg % 3 == 0) { //5로 안나누어지고, 3으로 나누어지면
+			kg -= 3; //3kg씩 뺀다
+			count++; //봉지의 개수를 1개 늘린다.
+		}
+		else if (kg > 5) { //계속 나누었을때 3으로 안나누어지는데 5보다 크면
+			kg -= 5; //5kg을 뺀다
+			count++; //봉지의 개수를 1개 늘린다.
+		}
+		else { //나머지 상황은 3과 5로 나누어 떨어지지 않는다
+			count = -1; //-1로 봉지개수 반환
+			break;
+		}
+	}
+	printf("봉지의 개수는 : %d \n", count);
+}
+
