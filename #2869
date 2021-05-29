@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int v; //나무높이
+	int a;//올라가는 높이
+	int b;//내려오는 높이
+	int h;//현재 달팽이 높이
+	int d=1;//일수
+
+	printf("나무의 높이:");
+	scanf("%d", &v);
+	printf("올라가는 높이:");
+	scanf("%d", &a);
+	printf("내려오는 높이:");
+	scanf("%d", &b);
+
+	while (1) 
+	{
+		h = a * d - b * (d - 1);//d일 낮까지 올라간 달팽이의 높이;
+		if (h <v)//나무를 다 오르지 못 햇을때
+		{
+			h = h - b;//b만큼 다시 미끄러짐
+			d++;//다음날
+		}
+		else
+		{
+			printf("나무를 오르는데 걸린 일수: %d", d);
+			break;//while문 종료
+		}
+	}
+}
