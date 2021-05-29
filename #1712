@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int main(void) 
+{
+	int a, b, c;//고정지출 a, 가변비용b, 노트북 가격 c
+	int d = 0;//판매량 d
+	int sum;//총 수익
+
+	printf("고정지출: \n");
+	scanf("%d", &a);
+	printf("가변비용(재료비 + 인건비): \n");
+	scanf("%d", &b);
+	printf("노트북 가격:");
+	scanf("%d", &c);
+
+
+	while (d > -1) 
+	{
+		sum = (c * d) - (a + b * d);//총 수익을 구하기 위한 식
+		if (sum > 0)//처음으로 이익이 되는 순간
+		{
+			printf("손익분기점: %d", d);// 손익분기점에서의 노트북 판매수 출력
+			break;
+		}
+		d++;//손익분기점을 넘기기위해서 판매량을 증가시킴
+	}
+
+}
