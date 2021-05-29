@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int n;// n번째 방
+	int a=1;//a번째 둘레
+	int i;
+	int sum = 1;//임의의 줄에 가장 큰 숫자의 방
+
+	printf("n번째 방: \n");
+	scanf("%d", &n);
+
+	if (n != 1) {//n이 1보다 클때
+		while (n > 1)
+		{
+			for (i = 0; i < a; i++)//n이 몇번째 줄에 있는지 구하기 위해 반복해준다.
+			{
+				 sum = sum + (6 * i);//가장큰 숫자의 방
+			}
+			if (sum < n) {//i번째 줄이 n번째 방을 포함하지 못 할때
+				a++;//다음 줄로 넘어간다
+				sum = 1;//sum을 다시 1로 초기화 시켜준다.
+			}
+			else {//i번째 줄이 n번 째방을 포함 할 때
+				printf("%d번 이동", a);
+				break;//while 문을 정지시킨다.
+			}
+		}
+	}
+
+	else
+		printf("%d", a);//n=1일때, a=1이다.
+	
+	
+}
