@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void)
+{
+int n;
+int a;
+printf("정수 n을 입력하시오: ");
+scanf("%d", &n);
+a=fibo(n);
+printf("%d", a);
+}
+int fibo(n)//피보나치수열 함수
+{
+if (n == 0)
+return 0;//n=0일 때 fibo(0)=0
+if (n == 1)
+return 1;//n=1일 때 fibo(1)=1
+return (fibo(n - 2) + fibo(n - 1));//n>1 일 때, fibo(n-2) 와 fibo(n-1) 의 함수를 다시
+실행하여 fibo(n-2)와 fibo(n-1)의 값을 더함
+}
